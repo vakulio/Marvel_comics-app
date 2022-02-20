@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.3.0",
     "sass": "^1.38.0"
   }
 }

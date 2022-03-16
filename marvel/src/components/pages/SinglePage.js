@@ -7,6 +7,7 @@ import ErrorMessage from '../errorMessage/errorMessage';
 import AppBanner from "../appBanner/AppBanner";
 
 
+
 const SinglePage = ({Component, dataType}) => {
         const {id} = useParams();
         const [data, setData] = useState(null);

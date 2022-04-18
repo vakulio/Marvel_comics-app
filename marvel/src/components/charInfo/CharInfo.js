@@ -12,7 +12,7 @@ const CharInfo = (props) => {
 
     useEffect(() => {
         updateChar()
-    }, [props.charId])
+    }, [props.charId]) // eslint-disable-line react-hooks/exhaustive-deps
 
     const updateChar = () => {
         const {charId} = props;
@@ -69,7 +69,7 @@ const View = ({data}) => {
             {comics.length > 0 ? null : 'There is no comics'}
             {
                 comics.map((item, i) => {
-                    if (i > 9) { return };
+                    if (i > 9) { return };  
                     return (
                         <Link className="char__comics-item" to={`/comics/${item.resourceURI.slice(-5)}`}>
                         <li key={i}> {item.name} </li>

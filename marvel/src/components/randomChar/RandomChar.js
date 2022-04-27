@@ -17,7 +17,7 @@ const RandomChar = () => {
         return () => {
             clearInterval(timerId);
         }
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const onCharLoaded = (char) => {
         setChar(char)

@@ -14,7 +14,7 @@ const SinglePage = ({Component, dataType}) => {
 
         useEffect(() => {
             updateData()
-        }, [id]) // eslint-disable-line react-hooks/exhaustive-deps
+        }, [id])
 
         const updateData = () => {
             clearError();

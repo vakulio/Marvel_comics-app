@@ -32,7 +32,7 @@ const ComicsList = () => {
 
     useEffect(() => {
         onRequest(offset, true);
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [])
 
     const onRequest = (offset, initial) => {
         initial ? setNewItemLoading(false) : setNewItemLoading(true)

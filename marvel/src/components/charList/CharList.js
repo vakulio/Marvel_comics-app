@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '../spinner/Spinner';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
@@ -32,7 +32,7 @@ const CharList = (props) => {
 
     useEffect(() => {
         onRequest(offset, true);
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [])
 
     const onRequest = (offset, initial) => {
         initial ? setNewItemLoading(false) : setNewItemLoading(true)
@@ -100,14 +100,9 @@ const CharList = (props) => {
         )
     }
 
-    const elements = useMemo(() => {
-        return setContent(process, () => renderItems(charList), newItemLoading);
-        // eslint-disable-next-line
-    }, [process])
-
         return (
             <div className="char__list">
-                {elements}
+                {setContent(process, () => renderItems(charList), newItemLoading)}
                 <button 
                 className="button button__main button__long"
                 disabled={newItemLoading}
